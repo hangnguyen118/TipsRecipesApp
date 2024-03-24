@@ -6,8 +6,9 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { MENUITEMS, RECIPES, BLOGS } from '../data/data';
 import { SquareCard, SquareMediumCard, ListItem, Slider } from '../components';
 import { Blog } from '../data/data';
+import { MainTabScreenProps } from '../navigation/types';
 
-const Home = () => {
+const Home = ({ navigation, route }: MainTabScreenProps<'Home'>) => {
   function chunkArray(array: Blog[], chunkSize: number) {
     return Array.from({ length: Math.ceil(array.length / chunkSize) }, (v, index) =>
       array.slice(index * chunkSize, index * chunkSize + chunkSize)
@@ -49,7 +50,7 @@ const Home = () => {
         keyExtractor={item => item.id}
         renderItem={({ item }) => {
           return (
-            <TouchableOpacity onPress={() => Alert.alert('ok')}>
+            <TouchableOpacity onPress={() => navigation.navigate('DetailRecipe')}>
               <SquareMediumCard title={item.title} imageLink={item.imageLink} nutritionnalInfomation={item.nutritionnalInfomation} />
             </TouchableOpacity>
           )

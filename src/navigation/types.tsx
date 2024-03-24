@@ -4,6 +4,7 @@ import type { NavigatorScreenParams, CompositeScreenProps } from '@react-navigat
 
 export type RootStackParamList = {
     MainTab: NavigatorScreenParams<MainTabParamList>;
+    DetailRecipe: undefined;
     OnBoarding: undefined;
     Login: undefined;
     Register: undefined;
@@ -17,7 +18,7 @@ export type MainTabParamList = {
     Search: undefined;
     Scanner: undefined;
     Recipes: undefined;
-    Profile: undefined;
+    Profile: undefined;    
 }
 
 export type MainTabScreenProps<T extends keyof MainTabParamList> =

@@ -7,7 +7,7 @@ import Setting from "./Setting";
 import Onboarding from "./Onboarding";
 import Recipes from "./Recipes";
 import Home from "./Home";
-
+import DetailRecipe from "./DetailRecipe";
 export {
     Login,
     Register,
@@ -17,5 +17,6 @@ export {
     Setting,
     Onboarding,
     Recipes,
-    Home
+    Home,
+    DetailRecipe
 }

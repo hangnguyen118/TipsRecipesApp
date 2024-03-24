@@ -2,6 +2,7 @@ import { View, Text, StyleSheet, Image, ImageProps } from 'react-native'
 import React from 'react'
 import { BORDERRADIUS } from '../../theme/theme'
 import { RoundButton } from '..'
+
 export type Props = {
     title: string,
     content?: string,
@@ -14,13 +15,13 @@ const ListItem: React.FC<Props> = ({ title, imageLink, content, author, creation
     return (
         <View style={styles.wrapperCard}>
             <View style={styles.wrapperLeft}>
-                <Image resizeMode='cover' source={imageLink} style={styles.image}/>
+                <Image resizeMode='cover' source={imageLink} style={styles.image} />
             </View>
 
             <View style={styles.wrapperRight}>
                 <Text>{creationDay}</Text>
                 <Text ellipsizeMode='tail' numberOfLines={2}>{title}</Text>
-                <RoundButton/>
+                <RoundButton />
             </View>
         </View>
     )
